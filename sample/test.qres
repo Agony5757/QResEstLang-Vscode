@@ -1,0 +1,20 @@
+Prog1: QRegs(len=12, q_0[d_0], q_1[d_1], q_2[d_2], q_3[d_3], q_4[d_4], aaa[d_5], q_6[d_6], q_7[d_7], q_8[d_8], q_9[d_9], q_10[d_10], q_11[d_11]), Params(len=2, bbb, p_1), TempRegs(len=0), Submodules(len=0) -> {
+ThreeQAdder: QRegs(q_0, q_1, q_2, q_3), Params(bbb, p_1);
+ThreeQAdder.dag: QRegs(q_4, aaa, q_6, q_7), Params(bbb, p_1), Controllers(q_0);
+ThreeQAdder.dag: QRegs(q_8, q_9, q_10, q_11), Params(bbb, p_1);
+}
+ThreeQAdder: QRegs(len=4, q_0[d_0], q_1[d_1], q_2[d_2], q_3[d_3]), Params(len=2, p_0, p_1), TempRegs(len=3, _tmp_ThreeQAdder_1[10], _split_r1_1[0], _split_r1_2[0]), Submodules(len=0) -> {
+QAdder.dag: QRegs(q_0, _tmp_ThreeQAdder_1, q_3), Params(p_0);
+SplitRegister: QRegs(q_0, _split_r1_1), Params(5);
+SplitRegister: QRegs(q_1, _split_r1_2), Params(5);
+QAdder: QRegs(_split_r1_1, _split_r1_2, q_0), Params(p_1);
+QAdder: QRegs(_split_r1_1, _split_r1_2, q_1), Params(p_1);
+SplitRegister.dag: QRegs(q_0, _split_r1_1), Params(5);
+SplitRegister.dag: QRegs(q_1, _split_r1_2), Params(5);
+QAdder: QRegs(q_0, q_2, q_3), Params(p_0);
+QAdder: QRegs(q_1, _tmp_ThreeQAdder_1, q_3), Params(p_0);
+}
+QAdder: QRegs(len=3, q_0[d_0], q_1[d_1], q_2[d_2]), Params(len=1, p_0), TempRegs(len=0, ), Submodules(len=0, ) -> {
+}
+SplitRegister: QRegs(len=2, q_0[d_0], q_1[d_1]), Params(len=1, p_0), TempRegs(len=0, ), Submodules(len=0, ) -> {
+}

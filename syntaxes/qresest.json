@@ -1,0 +1,54 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Qresest",
+    "scopeName": "source.qresest",
+    "patterns": [
+      {
+        "name": "comment.line.double-slash.qresest",
+        "match": "//.*"
+      },
+      {
+        "name": "string.quoted.double.qresest",
+        "begin": "\"",
+        "end": "\""
+      },
+      {
+        "name": "keyword.other.len.qresest",
+        "match": "\\b(len=)\\b"
+      },
+      {
+        "name": "entity.name.type.regitem.qresest",
+        "match": "(?<=reg_item\\s|temp_reg_item\\s)\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+      },
+      {
+        "name": "variable.parameter.param.qresest",
+        "match": "(?<=param\\s)\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+      },
+      {
+        "name": "entity.name.function.qresest",
+        "match": "(?<=^|\\s)([A-Za-z_][A-Za-z0-9_]*)(?=\\s*:)"
+      },
+      {
+        "name": "keyword.control.type.qresest",
+        "match": "\\b(QRegs|Params|TempRegs|Submodules)\\b"
+      },
+      {
+        "name": "storage.type.primitive.qresest",
+        "match": "\\b(NAME|INT|FLOAT)\\b"
+      },
+      {
+        "name": "constant.numeric.qresest",
+        "match": "\\b([0-9]+(\\.[0-9]+)?)\\b"
+      },
+      {
+        "name": "variable.other.qresest",
+        "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b"
+      },
+      {
+        "name": "punctuation.separator.qresest",
+        "match": "->|{|}|:|,|;|$|\\."
+      }
+    ],
+    "repository": {}
+  }
+  

@@ -1,0 +1,72 @@
+{
+  "name": "qresest",
+  "publisher": "Agony5757",
+  "displayName": "QResEst-Language",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "qresest",
+        "aliases": [
+          "QResEst",
+          "qresest"
+        ],
+        "extensions": [
+          ".qres"
+        ],
+        "configuration": "./language-configuration.json"
+      }      
+    ],
+    "grammars": [
+      {
+        "language": "qresest",
+        "scopeName": "source.qresest",
+        "path": "./syntaxes/qresest.json"
+      }
+    ],
+    "colors": [
+      {
+        "id": "entity.name.function.qresest",   
+        "scope": "entity.name.function.qresest",   
+        "description": "Function name color",
+        "defaults": {                 
+          "light": "#FF5733",         
+          "dark": "#FF5733",          
+          "highContrast": "#FF5733"    
+        },
+        "settings": {                 
+          "foreground": "#FF5733"     
+        }
+      },
+      {
+        "id": "qresest.registerName",
+        "description": "Register name color",
+        "defaults": {
+          "light": "#68a072",
+          "dark": "#68a072"
+        },
+        "settings": {
+          "foreground": "#68a072"
+        }
+      },
+      {
+        "id": "qresest.lenKeyword",
+        "description": "Len keyword color",
+        "defaults": {
+          "light": "#b564b5",
+          "dark": "#b564b5"
+        },
+        "settings": {
+          "foreground": "#b564b5"
+        }
+      }
+    ]
+  }
+}
